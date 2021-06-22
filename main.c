@@ -37,6 +37,8 @@ int main()
  * *********************************************************************************/
 static DBusHandlerResult gsettings_changed(DBusConnection* conn, DBusMessage* msg, void* userdata)
 {
+    (void)(conn);
+    (void)(userdata);
     if(!dbus_message_is_method_call(msg, "ca.desrt.dconf.Writer", "Change"))
     {
         // fprintf(stderr, "not method call of ca.desrt.dconf.Writer.Change\n");

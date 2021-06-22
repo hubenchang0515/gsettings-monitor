@@ -6,7 +6,7 @@ DBUS1_LIBS := `pkg-config --libs dbus-1`
 GLIB_CFLAGS := `pkg-config --cflags glib-2.0`
 GLIB_LIBS := `pkg-config --libs glib-2.0`
 
-CFLAGS := $(DBUS1_CFLAGS) $(GLIB_CFLAGS) -g
+CFLAGS := $(DBUS1_CFLAGS) $(GLIB_CFLAGS) -W -Wall -Wextra -O3
 LIBS := $(DBUS1_LIBS) $(GLIB_LIBS)
 
 TARGET := gsettings-monitor

@@ -45,13 +45,13 @@ uint32_t proc_get_pid_by_dbus(const char* name)
                                                     "GetConnectionUnixProcessID");
     if(request == NULL)
     {
-        fprintf(stderr, "dbus_message_new_method_call failed\n", err.name, err.message);
+        fprintf(stderr, "dbus_message_new_method_call failed\n");
         goto failed1;
     }
 
     if(!dbus_message_append_args(request, DBUS_TYPE_STRING, &name, DBUS_TYPE_INVALID))
     {
-        fprintf(stderr, "dbus_message_append_args failed\n", err.name, err.message);
+        fprintf(stderr, "dbus_message_append_args failed\n");
         goto failed2;
     }
 
