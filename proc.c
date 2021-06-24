@@ -59,7 +59,7 @@ uint32_t proc_get_pid_by_dbus(const char* name)
     if(response == NULL || dbus_error_is_set(&err))
     {
         fprintf(stderr, "%s:%s\n", err.name, err.message);
-        goto failed3;
+        goto failed2;
     }
 
     if(dbus_message_get_type(response) != DBUS_MESSAGE_TYPE_METHOD_RETURN)
