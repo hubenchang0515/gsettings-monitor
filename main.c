@@ -7,6 +7,9 @@ static DBusHandlerResult gsettings_changed(DBusConnection* conn, DBusMessage* ms
 
 int main()
 {
+    // 使用行缓冲，方便通过管道处理
+    setvbuf(stdout, NULL, _IOLBF, 128);
+    
     DBusError err;
     dbus_error_init(&err);
 
